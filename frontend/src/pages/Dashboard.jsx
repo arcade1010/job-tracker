@@ -4,8 +4,8 @@ export default function Dashboard() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem('token'); // 🔐 clear token
-    navigate('/'); // 🔁 redirect to login
+    localStorage.removeItem('token'); // clear token
+    navigate('/'); // redirect to login
   };
 
   return (
