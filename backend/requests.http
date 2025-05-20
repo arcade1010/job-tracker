@@ -6,3 +6,34 @@ Content-Type: application/json
   "email": "testuser@example.com",
   "password": "securepassword123"
 }
+
+
+### Job - add job
+POST http://localhost:5000/api/jobs/add
+Content-Type: application/json
+
+{
+  "userEmail": "madskull00000@gmail.com",
+  "company": "truist",
+  "position": "Juinor Software Engineer",
+  "portalUsername": "enwurster",
+  "portalEmail": "enwurster@gmail.com",
+  "portalPassword": "password123",
+  "notes": "Role requires AWS",
+  "timeline": [
+    {
+      "type": "applied",
+      "date": "2025-05-10T14:00:00.000Z",
+      "note": "Applied through company portal"
+    },
+    {
+      "type": "interview",
+      "date": "2025-05-15T14:00:00.000Z",
+      "note": "MS Teams interview with Dan Smith, head of software devs. Went well and said he would reach out for second interview"      
+    }
+  ]
+}
+
+
+###Get User's Job
+GET http://localhost:5000/api/jobs/user/madskull00000@gmail.com

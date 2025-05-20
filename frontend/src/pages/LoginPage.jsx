@@ -34,6 +34,7 @@ export default function LoginPage() {
       if (res.ok) {
         console.log('Login successful:', data);
         localStorage.setItem('token', data.token); // save token
+        localStorage.setItem('userEmail', email); // save user's email
         navigate('/dashboard');
       } else {
         setError(data.message || 'Login failed');
