@@ -11,7 +11,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/jobs/user/${userEmail}`);
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/api/jobs/user/${userEmail}`);
         const data = await res.json();
         setJobs(data);
       } catch (err) {
