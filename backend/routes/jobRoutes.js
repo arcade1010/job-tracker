@@ -24,5 +24,15 @@ router.get('/user/:email', async (req, res) => {
   }
 });
 
+// Delete job by ID
+router.delete('/:id', async (req, res) => {
+  try {
+    await Job.findByIdAndDelete(req.params.id);
+    res.json({ message: 'Job deleted successfully' });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 
 module.exports = router;

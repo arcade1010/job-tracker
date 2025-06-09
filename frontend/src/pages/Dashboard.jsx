@@ -69,7 +69,7 @@ export default function Dashboard() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {jobs.map((job) => (
-          <JobCard key={job._id} job={job} />
+          <JobCard key={job._id} job={job} fetchJobs={fetchJobs} />
         ))}
       </div>
     </div>
