@@ -44,7 +44,7 @@ export default function SignupPage() {
 
   return (
     <div>
-      <h2>Sign Up</h2>
+      <h2 className="text-4xl font-extrabold text-red-600 p-4 bg-yellow-200 rounded-lg shadow-xl">Sign Up</h2>
         <form onSubmit={handleSignup}>
           <input
             type="email"
